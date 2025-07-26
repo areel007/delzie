@@ -14,16 +14,16 @@ export default function Home() {
   return (
     <main>
       <div className="h-[44px]"></div>
-      <div className="h-[calc(100vh_-_70px)]">
+      <div className="">
         <div className="h-full max-w-[1300px] w-[90%] mx-auto py-[40px] md:py-[60px] grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[100px]">
-          <div className="h-full flex flex-col justify-center gap-[10px] md:gap-[20px]">
-            <h1 className="text-[30px] md:text-[46px] lg:text-[50px] leading-[1.2] md:leading-[1] text-[#000]/[.8] dark:text-[#fff] capitalize">
+          <div className="h-full flex flex-col justify-center gap-[15px] md:gap-[20px]">
+            <h1 className="text-[26px] md:text-[46px] lg:text-[50px] leading-[1.2] md:leading-[1] text-[#000]/[.8] dark:text-[#fff] capitalize">
               <code className="lowercase"><span className="text-[#00ff00]">let</span> ideas:<span className="text-[#00ff00]">string;</span> <br /> ideas=&quot;ace designs&quot; <br />console.log(ideas);</code>
             </h1>
             <div className="text-[#000]/[.7] dark:text-[#fff]/[.7]">
               <TypeWriter />
             </div>
-            <p className="dark:text-white/[.7] text-[16px] leading-[1.6]">
+            <p className="dark:text-white/[.7] text-[14px] md:text-[16px] leading-[1.6]">
               Need a developer? I build software that solves practical problems and creates seamless, impactful digital experiences.
             </p>
             <div className="flex flex-col md:flex-row gap-[10px] md:gap-[20px]">
