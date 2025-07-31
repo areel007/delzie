@@ -43,7 +43,24 @@ export const Header = () => {
 
                     <div className="flex items-center gap-[15px] md:gap-[30px]">
                         <nav className="items-center gap-[30px] hidden md:flex mr-[40px]">
-                            {MENU.map((item, i) => <NavLink key={i} href={item.href} text={item.text} type="next-link" className={`${pathname === item.href ? "text-[#00FF00]" : ""} hover:text-[#00FF00]`} />)}
+                            {MENU.map(({ href, text }) => {
+                                const isActive =
+                                    href === "/"
+                                        ? pathname === "/"
+                                        : pathname.startsWith(href);
+
+                                return (
+                                    <NavLink
+                                        key={href}
+                                        href={href}
+                                        text={text}
+                                        type="next-link"
+                                        className={`hover:text-[#00FF00] ${isActive ? "text-[#00FF00]" : ""}`}
+                                    />
+                                );
+                            })}
+
+
                         </nav>
 
                         <DownloadResume />
@@ -77,7 +94,7 @@ export const Header = () => {
         {isMobileMenuOut && <>
             <div className="h-[44px]"></div>
 
-            <div className="fixed top-[44px] left-0 w-full z-[10] h-[calc(100vh_-_44px)] bg-white/30 backdrop-blur-md">
+            <div className="fixed top-[44px] left-0 w-full z-[12] h-[calc(100vh_-_44px)] bg-white/30 backdrop-blur-md">
                 <div className="bg-black/[.09] dark:bg-black/[.7] w-full p-[20px]">
                     <p className="text-[#000]/[.7] dark:text-[#fff]/[.7] text-[14px]">
                         <strong>Main Navigation</strong> <br />

@@ -24,7 +24,7 @@ export const NavLink = ({
     const baseClasses = "text-[14px] font-[500]";
 
     // Highlight if current route matches href
-    const isActive = pathname === href;
+    const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
 
     if (type === "a-tag") {
         return (

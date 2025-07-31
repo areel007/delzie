@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import { Header } from "@/components/layouts/Header";
 import { Footer } from "@/components/layouts/Footer";
-import { Providers } from "./providers"
+import { Providers } from "../providers"
+import AuthProvider from "@/components/AuthProvider";
 
 export const metadata: Metadata = {
   title: "Sunday Morenikeji - DevDelz",
@@ -19,11 +20,13 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
+        <AuthProvider>
         <Providers>
           <Header />
           {children}
           <Footer />
         </Providers>
+        </AuthProvider>
       </body>
     </html>
   );
