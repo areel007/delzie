@@ -41,7 +41,7 @@ export default function SingleBlogLayout({ blogPost, increaseClap, clapActive }:
                     <span>{blogPost?.clap}</span>
                 </div>
 
-                <img src={blogPost?.image} alt={blogPost?.title} className="w-full h-[300px] object-cover" />
+                <img src={blogPost?.image} alt={blogPost?.title} className="w-full h-[150px] md:h-[300px] object-cover" />
 
                 <div dangerouslySetInnerHTML={{ __html: blogPost?.markdown || "" }} className="text-[14px] md:text-[16px]" />
 
