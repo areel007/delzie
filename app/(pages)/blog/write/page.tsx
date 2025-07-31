@@ -88,9 +88,10 @@ export default function WriteBlog() {
 
             <select className="outline-none p-[10px] border border-zinc-800" value={category} onChange={e => setCategory(e.target.value)}>
                 <option value="">Select Category</option>
-                <option value="fe">FE</option>
-                <option value="be">BE</option>
-                <option value="mobile">Mobile</option>
+                <option value="all">All</option>
+                <option value="fe">Frontend Development</option>
+                <option value="be">Backend Development</option>
+                <option value="mobile">Mobile Development</option>
             </select>
 
             <textarea

@@ -3,6 +3,7 @@ enum Category {
   frontend = "fe",
   backend = "be",
   mobile = "mobile",
+  all = "all",
 }
 
 const BlogSchema = new mongoose.Schema({
