@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BEClient from "./BEClient";
 import { BlogPost } from "@/types/blogs";
 import { API } from "@/lib/axios";
 import InnerBlogLayout from "@/components/layouts/InnerBlogLayout";
