@@ -75,7 +75,7 @@ export default function BlogLayoutContent({ children }: Props) {
 
                                         <Link
                                             href="/blog/write"
-                                            className={`text-[14px] font-[500] cursor-pointer h-full flex items-center capitalize ${"/blog" === pathname ? "border-b border-[#00ff00]" : ""
+                                            className={`text-[14px] font-[500] cursor-pointer h-full flex items-center capitalize ${pathname.startsWith("/blog/write") ? "border-b border-[#00ff00]" : ""
                                                 }`}
                                         >
                                             Write
