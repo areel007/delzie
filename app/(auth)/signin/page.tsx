@@ -11,7 +11,7 @@ export default function Signin() {
     const [password, setPassword] = useState("");
     const router = useRouter();
 
-    
+
 
     const handleLogin = async (e: FormEvent) => {
         e.preventDefault();
@@ -21,8 +21,11 @@ export default function Signin() {
             password,
         });
 
-        if (res?.ok) router.push("/blog/write");
+        if (res?.ok) router.push("/blog");
         else alert("Login failed");
+
+        setEmail("");
+        setPassword("");
     };
 
     return (
