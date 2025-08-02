@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/Button";
 import { GitLogo, JSLogo, NextJSLogo, NodeJSLogo, ReactJSLogo, TailwindCSSLogo, TypescriptLogo, VueJSLogo } from "@/components/StackLogo";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function AboutPage() {
@@ -42,7 +43,9 @@ export default function AboutPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[100px] items-center mb-[40px] md:mb-[100px]">
                         <div className="flex justify-center items-center">
-                            <div className="w-[350px] h-[350px] rounded-full bg-black"></div>
+                            <div className="w-[250px] md:w-[350px] h-[250px]md:h-[350px] rounded-full bg-black">
+                                <Image src="/images/sunday_linkedin.jpeg" alt="sunday morenikeji profile picture" width={100} height={100} className="w-full h-full object-cover rounded-full grayscale" />
+                            </div>
                         </div>
                         <div className="flex flex-col gap-[10px]">
                             <h1 className="text-[20px] md:text-[24px] text-[#00ff00]">About Me</h1>
